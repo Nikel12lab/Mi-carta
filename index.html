@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta para mi amor</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif; /* Fuente más elegante */
+            background-color: #f9f9f9; /* Color de fondo suave */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden; /* Evita barras de desplazamiento */
+        }
+        .carta-container {
+            perspective: 1000px; /* Perspectiva 3D */
+        }
+        .carta {
+            background-color: #ffffff; /* Fondo blanco para la carta */
+            border: 1px solid #e0e0e0; /* Borde gris claro */
+            border-radius: 12px; /* Bordes redondeados */
+            width: 400px;
+            height: 620px;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateY(0deg);
+            transition: transform 1s;
+            cursor: pointer;
+        }
+        .carta .front, .carta .back {
+            position: absolute;
+            width: 200%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 12px; /* Bordes redondeados */
+        }
+        .carta .front {
+            background-color: #3498db; /* Color frontal azul */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            font-size: 24px;
+        }
+        .carta .back {
+            background-color: #ffffff; /* Fondo blanco para la parte posterior */
+            border: 1px solid #e0e0e0; /* Borde gris claro */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+            padding: 20px;
+            transform: rotateY(180deg);
+            line-height: 1.8; /* Mejor lectura */
+        }
+        .carta h1 {
+            color: #2c3e50; /* Color oscuro para el título */
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: normal; /* Menos negrita para el título */
+        }
+        .carta p {
+            color: #34495e; /* Color del texto más suave */
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .carta .firma {
+            margin-top: 20px;
+            font-style: italic;
+            color: #7f8c8d; /* Gris claro para la firma */
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="carta-container">
+        <div class="carta" id="carta">
+            <div class="front">
+                Haz click, que aca vas a encontrar el amor verdadero 💕🌻
+            </div>
+            <div class="back">
+                <h1>Querida Nicoll 😍,</h1>
+                <p>
+                    Hoy quiero escribirte algo. No soy muy buena escribiendo para alguien, pero me desperté y
+decidí que hoy quería escribir algo para ti
+                </p>
+                <p>
+                    Te conocí hace poco, relativamente, pero te quiero como si fuera desde hace mucho tiempo. Mi corazón se acelera cuando estoy contigo. Cada día, me inspiras a ser una mejor persona, por mí y por ti, para darte lo mejor de mí. Todo el amor que te doy es el más sincero del mundo. Sé que siempre habrá altas y bajas, y no quiero desfallecer en ninguna de ellas. Quiero crecer contigo hasta tal punto que nada nos pueda hacer caer. Quiero estar a tu lado en tus buenos y malos momentos.
+                </p>
+                <p>
+                    Tal vez en este momento no pueda ofrecerte mucho, pero dame un poco de tiempo y te daré todo lo bueno de la vida. Quiero compartir muchos momentos contigo. Quiero que, cuando me pregunten por cualquier lado, pueda decir: "Ya fui con el amor mío."
+                </p>
+                <p>
+                    Antes de conocerte, llevaba mucho tiempo sola y no pensaba que pudiera querer a alguien de la forma en que te quiero a ti. No puedo evitar sonreír cada vez que pienso en ti. Me llenas de una alegría indescriptible y me haces sentir más viva que nunca. Eres mi persona favorita en el mundo, y cada momento a tu lado se siente como una pequeña eternidad de felicidad. No importa qué desafíos enfrentemos, sé que contigo a mi lado, todo es posible. Quiero que sepamos que este amor es único y que vamos a construir juntas un sinfín de recuerdos inolvidables.
+                </p>
+                <p class="firma">
+                    Con cariño,<br>
+                    Tu amor💕
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('carta').addEventListener('click', function() {
+            this.style.transform = this.style.transform === 'rotateY(180deg)' ? 'rotateY(0deg)' : 'rotateY(180deg)';
+        });
+    </script>
+</body>
+</html>
